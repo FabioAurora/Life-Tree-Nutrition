@@ -1,0 +1,24 @@
+
+
+
+
+:root {
+    --body-font: 'Montserrat', sans-serif;
+    --title-font: 'Kumbh Sans', sans-serif;
+    --bg-test-1: #F1FAEE;
+    --bg-test-2: #FFF5EE;
+    --bg-test-3: #FFF4E6;
+    --bg-test-4: #FFE5D9;
+    --bg-test-5: #FFE5D9;
+    --bg-test-5: #FAF3DD;
+    --bg-test-5: #CFF4D2;
+
+    --accent-clr-1: #A8DADC;
+    --accent-clr-2: #A8DADC;
+    --accent-clr-3: #A8E6CF;
+    --accent-clr-4: #FFD5B6;
+}
+
+body {
+    background-color: var(--bg-test-1);
+} 
