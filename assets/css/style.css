@@ -22,3 +22,21 @@
 body {
     background-color: var(--bg-test-1);
 } 
+
+.header_top {
+    
+}
+
+.container {
+    max-width: 1300px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
