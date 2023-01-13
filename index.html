@@ -38,37 +38,38 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- fontAwesome -->
+    <script src="https://kit.fontawesome.com/5c34627e0f.js" crossorigin="anonymous"></script>
+
     <!-- JavaScript -->
     <script src="assets/JS/script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="contact">
-                            <ul>
-                                <li>email: coisa@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="socials">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
+    <header class="header" aria-label="Header">
+        <section class="header__top">
+            <div class="container flex-row">
+                <div class="header__contact">
+                    <ul class="header__list">
+                        <a href="mailto:#">
+                            <li class="header__item">email@example.com</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="header__socials">
+                    <ul class="header__list flex-row">
+                        <li class="header__item">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li class="header__item">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li class="header__item">
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <nav class="header_bottom">
-             
-        </nav>
+        </section>
     </header>
 </body>
 </html>

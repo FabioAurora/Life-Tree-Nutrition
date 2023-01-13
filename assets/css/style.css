@@ -1,10 +1,45 @@
+/* || CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
+    font-family: var(--body-font);
+  }
+  img, picture, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, select, a {
+    font: inherit;
+    color: inherit;
+  }
+  p, h1, h2, h3 {
+    overflow-wrap: break-word;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
 
-
-
-
+/* || Root, CSS variables */
 :root {
+    /* || Typography */
     --body-font: 'Montserrat', sans-serif;
     --title-font: 'Kumbh Sans', sans-serif;
+
+    /* || Colors */
     --bg-test-1: #F1FAEE;
     --bg-test-2: #FFF5EE;
     --bg-test-3: #FFF4E6;
@@ -19,24 +54,32 @@
     --accent-clr-4: #FFD5B6;
 }
 
-body {
-    background-color: var(--bg-test-1);
-} 
-
-.header_top {
-    
+/* reusable CSS */
+.flex-row {
+    display: flex;
+    justify-content: space-between;
 }
 
 .container {
     max-width: 1300px;
+    padding: 0 1rem;
+    margin: 0 auto;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
+/* Custom CSS */
 
-.col-md-6 {
-    flex: 0 0 auto;
-    width: 50%;
+/* || Header and Main Navigation */
+.header__top {
+    background-color: #222222;
+    color: white;
+    font-size: .875rem;
 }
+    .header__list {
+        border-collapse: collapse;
+    }
+ .header__item {
+    border-left: 1px solid rgba(255, 255, 255, 0.29);
+    padding: .5rem 1rem;
+ }.header__item:last-child {
+    border-right: 1px solid rgba(255 255 255 / 29%);
+ }
