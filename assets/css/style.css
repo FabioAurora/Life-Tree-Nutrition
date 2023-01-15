@@ -96,6 +96,10 @@
     border-right: 1px solid rgba(255 255 255 / 29%);
  }
 
+ .fa-brands {
+  font-size: 1rem;
+}
+
  /* || Header - navigation */
  .navbar {
   padding: 1rem 1.5rem;
@@ -103,9 +107,6 @@
  }
 .navbar__brand {
   width: 5rem;
-}
-.fa-brands {
-  font-size: 1rem;
 }
 
 
