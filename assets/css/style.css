@@ -1,3 +1,4 @@
+/* Navigate through sections by searching "||" */
 /* || CSS Reset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -12,7 +13,8 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-size: 1em;
+    /* font grows 1px for every 100px of viewport width */
+    font-size: calc(1em + 1vw);
     font-family: var(--body-font);
   }
   img, picture, svg {
@@ -54,32 +56,73 @@
     --accent-clr-4: #FFD5B6;
 }
 
-/* reusable CSS */
-.flex-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.container {
+/* || reusable CSS */
+.is-centered {
     max-width: 1300px;
-    padding: 0 1rem;
     margin: 0 auto;
 }
 
-/* Custom CSS */
 
-/* || Header and Main Navigation */
+/* Custom CSS */
+/* || Header - top header */
 .header__top {
+    display: none;
     background-color: #222222;
     color: white;
-    font-size: .875rem;
+    font-size: .825rem;
+    font-weight: 300;
 }
-    .header__list {
-        border-collapse: collapse;
-    }
- .header__item {
+.header__top-contact {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.header__contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.header__list {
+    border-collapse: collapse;
+}
+
+.header__item {
     border-left: 1px solid rgba(255, 255, 255, 0.29);
-    padding: .5rem 1rem;
+    padding: .6rem 1rem;
  }.header__item:last-child {
     border-right: 1px solid rgba(255 255 255 / 29%);
  }
+
+ /* || Header - navigation */
+ .navbar {
+  padding: 1rem 1.5rem;
+
+ }
+.navbar__brand {
+  width: 5rem;
+}
+.fa-brands {
+  font-size: 1rem;
+}
+
+
+
+/* || Media Queries */
+@media screen and (min-width: 48rem) {
+  .header__top {
+    display: block;
+  }
+  .is-centered {
+    max-width: 960px;
+    margin: 0 auto;
+}
+}
+
+@media screen and (min-width: 74.938) {
+  .is-centered {
+    max-width: 1300px;
+}
+}
