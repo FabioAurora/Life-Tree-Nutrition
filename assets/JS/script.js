@@ -1,5 +1,5 @@
 "use strict";
-
+/* accessing DOM elements */
 const navBurger = document.querySelector('.navbar__hamburger');
 const navMenu = document.querySelector('.navbar__menu');
 
@@ -25,7 +25,7 @@ navMenu.addEventListener('transitionend', (e) => {
 
 
 
-/* animated elements from right to left when the DOM elements are loaded */
+/* animate elements from right to left when the DOM elements are loaded */
 document.addEventListener('DOMContentLoaded', () => {
     let elements = document.querySelectorAll('.animated-element');
     let delay = 0;
