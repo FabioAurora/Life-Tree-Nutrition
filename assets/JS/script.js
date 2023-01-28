@@ -2,6 +2,7 @@
 /* accessing DOM elements */
 const navBurger = document.querySelector('.navbar__hamburger');
 const navMenu = document.querySelector('.navbar__menu');
+const body = document.querySelector('body');
 
 /* Menu toggle class and translate animation */
 let menuActive = false;
@@ -9,6 +10,7 @@ navBurger.addEventListener('click', () => {
   menuActive = !menuActive;
   navBurger.classList.toggle('active', menuActive);
   navMenu.classList.toggle('active', menuActive);
+  body.classList.toggle('fixed', menuActive);
   if(!menuActive){
     navMenu.classList.add('inactive')
   }else{

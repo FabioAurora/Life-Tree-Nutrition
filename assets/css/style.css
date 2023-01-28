@@ -80,6 +80,11 @@
   animation: slideIn 1s ease-in-out forwards;
 }
 
+.fixed {
+  position: fixed;
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+}
 
 /* Custom CSS */
 /* || Header - top header */
