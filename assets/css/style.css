@@ -16,6 +16,7 @@
     font-size: clamp(1rem, 1vw, 1.2rem);
     font-family: var(--body-font);
     background-color: var(--primary-light);
+    overflow-x: hidden;
   }
   img, picture, svg {
     display: block;
@@ -132,7 +133,8 @@
   justify-content: space-between;
   align-items: center;
   padding: .5rem 1.5rem;
-  position: relative;
+  /* position: relative; */
+  z-index: 1;
  }
 .navbar__brand {
   width: 8rem;
@@ -143,17 +145,18 @@
   flex-direction: column;
   text-align: center;
   position: absolute;
-  width: 50%;
+  width: 100%;
+  height: 100vh;
   top: 0;
-  right: -30px;
+  left: 0;
   padding: 5.2rem 0 1rem;
   transition: transform .5s ease-in-out;
   -webkit-transition: transform .5s ease-in-out;
-  background-color: rgb(64 162 38 / 60%);
+  background-color: rgb(64 162 38 / 90%);
   color: var(--primary-light);
   transform: translateX(100%);
   font-weight: 600;
-  z-index: 5;
+  z-index: 9;
 }
   .navbar__menu.active {
     transform: translateX(0);
@@ -167,7 +170,6 @@
 .navbar__item {
   padding: 1rem 0;
   transition: all .3s ease-in-out;
-  cursor: pointer;
 }
   .navbar__item:hover {
     background-color: var(--primary-green);
@@ -177,6 +179,7 @@
 .navbar__link {
   display: inline-block;
   width: 100%;
+  cursor: pointer;
 }
 
 /* Hamburger menu */
@@ -305,24 +308,42 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 1.5rem;
     position: relative;
-    top: 0;
-    right: 0;
-    width: 100%;
+    height: 0;
     padding: 1rem 0;
     background-color: var(--primary-light);
     transform: translateX(0);
     color: var(--primary-dark);
     font-weight: 400;
   }
-  .navbar__item {
-    padding: .8rem 1rem;
+  .navbar__item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
   }
+  .navbar__link {
+    position: relative;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+  .navbar__link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-clr-green);
+    opacity: 0;
+    transition: opacity .2s ease-in;
+  }
+    .navbar__link:hover::before {
+      opacity: 1;
+    }
 
   .contact__link {
     font-size: 1.1rem;
-    padding: .8rem 3rem;
+    padding: 1rem 3rem;
     text-transform: uppercase;
     background-color: var(--primary-green);
     color: var(--primary-light);

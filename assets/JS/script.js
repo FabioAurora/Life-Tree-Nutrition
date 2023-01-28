@@ -29,12 +29,12 @@ navMenu.addEventListener('transitionend', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     let elements = document.querySelectorAll('.animated-element');
     let delay = 0;
-    let interval = .5;
+    let interval = .7;
 
     elements.forEach((element, index) => {
         setTimeout(() => {
             element.style.animationDelay = delay + (interval * index) + 's';
             element.classList.add('animate');
-        }, delay * 1000);
+        }, delay * 2000);
     });
 });
